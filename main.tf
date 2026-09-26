@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_instance" "one" {
    ami = "ami-0332d564d76dbd8d6"
    instance_type = "t3.small"
-   key_name = "vinu"
+   key_name = "vpcpair"
    vpc_security_group_ids = [aws_security_group.five.id]
    availability_zone = "us-east-1a"
    user_data = <<EOF
@@ -24,7 +24,7 @@ EOF
 resource "aws_instance" "two" {
     ami = "ami-0332d564d76dbd8d6"
     instance_type = "t3.small"
-    key_name = "vinu"
+    key_name = "vpcpair"
     vpc_security_group_ids = [aws_security_group.five.id]
     availability_zone = "us-east-1b"
     user_data = <<EOF
@@ -43,7 +43,7 @@ EOF
 resource "aws_instance" "three" {
     ami = "ami-0332d564d76dbd8d6"
     instance_type = "t3.small"
-    key_name = "vinu"
+    key_name = "vpcpair"
     vpc_security_group_ids = [aws_security_group.five.id]
     availability_zone = "us-east-1a"
     user_data = <<EOF
@@ -62,7 +62,7 @@ EOF
 resource "aws_instance" "four" {
     ami = "ami-0332d564d76dbd8d6"
     instance_type = "t3.small"
-    key_name = "vinu"
+    key_name = "vpcpair"
     vpc_security_group_ids = [aws_security_group.five.id]
     availability_zone = "us-east-1b"
     user_data = <<EOF
